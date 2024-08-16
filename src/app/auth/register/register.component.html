@@ -1,0 +1,30 @@
+
+<mat-card style="width: 20%">
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="register()">
+      <p>
+        <mat-form-field>
+          <input type="text" matInput placeholder="email" formControlName="email">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+      </p>
+
+
+      <div class="button">
+        <button mat-button>Registration</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+<mat-card-actions>
+  <div class="button" (click)="back()">
+    <button mat-button>back</button>
+  </div>
+</mat-card-actions>
+</mat-card>

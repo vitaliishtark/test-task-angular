@@ -1,0 +1,35 @@
+
+<mat-card >
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content style="width: 100%;">
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <p>
+        <mat-form-field>
+          <input type="text" matInput placeholder="email" formControlName="email">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+      </p>
+
+      <div class="button">
+        <button type="submit" mat-button>Login</button>
+      </div>
+
+      <div class="button">
+        <button (click)="goToRegister()" mat-button>Registration</button>
+      </div>
+
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button style="padding: 1rem;" (click)="loginWithGoogle()">
+      <mat-icon style="width: 50px; height:30px"
+                svgIcon="logo"></mat-icon> Login With Google
+    </button>
+  </mat-card-actions>
+</mat-card>
